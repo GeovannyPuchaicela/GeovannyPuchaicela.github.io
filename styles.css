@@ -14,6 +14,7 @@
     --text-gray: #64748b;
     --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-size-paragraphs: 18px;
+    --card-radius: 16px;
 }
 
 header {
@@ -131,7 +132,8 @@ header {
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-#customers {
+#customers,
+#resources {
     text-align: center;
     padding: 100px 80px;
     background-color: #fff;
@@ -139,15 +141,15 @@ header {
 }
 
 /* Títulos */
-#customers .titulo h2 {
+.titulo h2 {
     font-size: 36px;
     color: #111827;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 
-#customers .titulo h2 strong {
-    font-weight: 800;
+.titulo h2 strong {
+    font-weight: 700;
 }
 
 #customers .titulo p {
@@ -176,13 +178,58 @@ header {
 
 
 }
+
 .card img {
     width: 80px;
     height: 90px;
     border-radius: 50%;
     margin-bottom: 12px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.05);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
 }
+
+/* Resources */
+.arrow {
+    font-size: 20px;
+}
+
+#content-resources {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 65px;
+}
+
+.resource-card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 280px;
+    height: 100%;
+}
+
+.resource-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--card-radius);
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+.resource-card h3 {
+    font-size: 18px;
+    font-weight: 540;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    color: hsl(223, 33%, 22%);
+}
+
+.resource-card a{
+  gap:8px;
+  font-weight:560;
+  text-decoration:none;
+  align-self: flex-end;
+}
+
 
 footer {
     background-color: var(--footer-color);
