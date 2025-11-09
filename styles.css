@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid slateblue; */
-
 }
 
 :root {
@@ -15,6 +13,7 @@
     --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-size-paragraphs: 18px;
     --card-radius: 16px;
+    --border-bajo: 1px solid #e5e7eb;
 }
 
 header {
@@ -69,7 +68,6 @@ header {
 }
 
 
-
 #inicio {
     display: flex;
     align-items: center;
@@ -77,10 +75,11 @@ header {
     padding: 100px 80px;
     background-color: #fff;
     font-family: var(--font-family);
+    border-bottom: var(--border-bajo);
 }
 
 #inicio img {
-    max-width: 1120px;
+    max-width: 850px;
     max-height: 880px;
     height: auto;
 }
@@ -138,6 +137,7 @@ header {
     padding: 100px 80px;
     background-color: #fff;
     font-family: var(--font-family);
+    border-bottom: var(--border-bajo) 
 }
 
 /* Títulos */
