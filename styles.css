@@ -17,15 +17,38 @@
     --card-radius: 16px;
     --border-bajo: 1px solid #e5e7eb;
     --font-size-ourdesign: 14px;
+    --padding-section: 100px 80px;
+    --padding-horizontal: 80px;
+    --box-shadow-light: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --border-radius-circle: 50%;
+    --line-height-normal: 1.6;
+    --line-height-relaxed: 1.8;
+    --transition-default: 0.2s ease;
+}
+
+.reset-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-gradient {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform var(--transition-default);
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 18px 80px;
+    padding: 18px var(--padding-horizontal);
     font-family: var(--font-family);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--box-shadow-light);
     background: white;
     position: sticky;
     top: 0;
@@ -45,7 +68,6 @@ header {
 }
 
 #navegador nav ul {
-    list-style: none;
     display: flex;
     gap: 40px;
 }
@@ -57,17 +79,8 @@ header {
 
 }
 
-
-
 #botonContacto button {
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    border: none;
     padding: 10px 22px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-
 }
 
 
@@ -75,7 +88,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 80px;
+    padding: var(--padding-section);
     background-color: #fff;
     font-family: var(--font-family);
     border-bottom: var(--border-bajo);
@@ -116,21 +129,16 @@ header {
 
 #texto p {
     margin-top: 25px;
-    font-size: 18px;
+    font-size: var(--font-size-paragraphs);
     color: var(--text-gray);
-    line-height: 1.6;
+    line-height: var(--line-height-normal);
 }
 
 #texto button {
     margin-top: 40px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    border: none;
     padding: 15px 35px;
     border-radius: 10px;
     font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
@@ -138,8 +146,7 @@ header {
 #resources,
 #our-design {
     text-align: center;
-    padding: 100px 80px;
-    background-color: #fff;
+    padding: var(--padding-section);
     font-family: var(--font-family);
     border-bottom: var(--border-bajo) 
 }
@@ -158,8 +165,8 @@ header {
 
 #customers .titulo p {
     color: #6b7280;
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: var(--font-size-paragraphs);
+    line-height: var(--line-height-relaxed);
     max-width: 850px;
     margin: 30px auto 60px;
 }
@@ -181,6 +188,7 @@ header {
     justify-content: center;
     font-size: 30px;
     cursor: pointer;
+    font-family: Arial;
 }
 
 #content-cards {
@@ -190,7 +198,6 @@ header {
     gap: 40px;
     flex-wrap: wrap;
 }
-
 
 .card {
     background-color: #fff;
@@ -203,7 +210,7 @@ header {
 .card img {
     width: 90px;
     height: 90px;
-    border-radius: 50%;
+    border-radius: var(--border-radius-circle);
     margin-bottom: 12px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
 }
@@ -212,7 +219,7 @@ header {
     background-color: var(--footer-color);
     font-size: var(--font-size-ourdesign);
     color: var(--text-gray);
-    padding: 100px 80px;
+    padding: var(--padding-section);
 }
 
 #our-design .titulo {
@@ -235,7 +242,7 @@ header {
     background-color: white;
     border-radius: var(--card-radius);
     text-align: left;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--box-shadow-light);
 }
 
 .card-description-aproach img {
@@ -258,13 +265,9 @@ header {
 
 .card-description-aproach p {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: var(--line-height-normal);
     color: var(--text-gray);
 }
-
-
-
-
 
 /* Resources */
 #content-resources {
@@ -303,7 +306,6 @@ header {
 }
 
 .resource-card a {
-    gap: 8px;
     font-weight: 560;
     text-decoration: none;
     align-self: flex-end;
@@ -312,7 +314,7 @@ header {
 
 footer {
     background-color: var(--footer-color);
-    padding: 60px 80px 20px;
+    padding: 60px var(--padding-horizontal) 20px;
     font-family: var(--font-family);
     color: var(--text-gray);
 }
@@ -323,7 +325,6 @@ footer {
     gap: 100px;
     margin-bottom: 60px;
 }
-
 
 .footer-section {
     flex: 1;
@@ -339,14 +340,9 @@ footer {
 
 .footer-section p {
     font-size: var(--font-size-paragraphs);
-    line-height: 1.8;
+    line-height: var(--line-height-relaxed);
     color: var(--text-gray);
     margin-bottom: 10px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
 }
 
 .footer-section ul li {
@@ -382,13 +378,12 @@ footer {
     width: 40px;
     height: 40px;
     background-color: white;
-    border-radius: 50%;
+    border-radius: var(--border-radius-circle);
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: var(--text-dark);
-    font-weight: 600;
 }
 
 .social-icons a img {
@@ -400,7 +395,7 @@ footer {
 #copyright {
     text-align: center;
     padding: 0 10px;
-    margin: 30px -80px -20px -80px;
+    margin: 30px calc(var(--padding-horizontal) * -1) -20px calc(var(--padding-horizontal) * -1);
     background-color: white;
     border-top: 1px solid #d1d5db;
 }
